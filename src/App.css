@@ -25,73 +25,19 @@ form div {
   background-color: transparent;
 }
 
-form div .helper {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  height: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
-  top: -10%;
-  background-color: #fff;
-  left: 5%;
-  color: #3c0eb9;
-  -webkit-transition: 0.5s all ease;
-  transition: 0.5s all ease;
-  z-index: -1;
-}
-
-form div .helper.active {
-  top: -60%;
-  left: 5%;
-  z-index: 3;
-}
-
-form div .helper.error {
-  top: -60%;
-  color: #fff;
-  font-size: 1rem;
-  background-color: red;
-  z-index: 5;
-  -webkit-animation: error 0.8s ease 0s infinite;
-          animation: error 0.8s ease 0s infinite;
-}
-
-form div .helper.ok {
-  width: 30%;
-  height: 50%;
-  position: absolute;
-  top: -80%;
-  right: 0;
-  z-index: 4;
-}
-
-form div .helper.ok::after {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  content: "succesful";
-  color: green;
-  z-index: 5;
-  font-size: 1.5rem;
-}
-
-form div input {
-  width: 100%;
-  height: 100%;
+form input[type="file"] {
+  width: 40%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   border: 2px solid rgba(137, 43, 226, 0.26);
   border-radius: 1rem;
+  margin-top: 2rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: 10%;
   background-color: transparent;
+  z-index: 0;
 }
 
 form .btn-container {
@@ -113,27 +59,5 @@ form .btn-container button {
   background-color: blueviolet;
   color: #fff;
   border-radius: 1rem;
-}
-
-@-webkit-keyframes error {
-  from {
-    color: #fff;
-    background-color: red;
-  }
-  to {
-    color: red;
-    background-color: #fff;
-  }
-}
-
-@keyframes error {
-  from {
-    color: #fff;
-    background-color: red;
-  }
-  to {
-    color: red;
-    background-color: #fff;
-  }
 }
 /*# sourceMappingURL=App.css.map */

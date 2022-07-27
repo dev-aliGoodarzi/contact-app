@@ -13,14 +13,14 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  z-index: 2;
+  z-index: 5;
 }
 
 .editor-container .overlayAbsoulte {
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: 3;
+  z-index: 6;
   background-color: rgba(0, 0, 0, 0.356);
   left: 0;
   top: 0;
@@ -41,7 +41,7 @@
           justify-content: center;
   border-radius: 1rem;
   position: relative;
-  z-index: 999;
+  z-index: 7;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
@@ -52,6 +52,8 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 1rem;
+  position: relative;
+  z-index: 8;
 }
 
 .editor-container .editor-center form input {
@@ -62,7 +64,8 @@
           box-sizing: border-box;
   padding-left: 1rem;
   position: relative;
-  z-index: 99999;
+  z-index: 88;
+  background-color: #fff !important;
 }
 
 .editor-container .editor-center form button {

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import EditorInput from "../EditorInput/EditorInput";
 
 import "./Editor.css";
 
@@ -44,34 +45,14 @@ const Editor = ({ onEdit, setIsEditorActive }) => {
           onSubmit={(e) => onSubmitHandeler(e)}
           onClick={() => setIsEditorActive(true)}
         >
-          <input
-            type="text"
-            name="name"
-            onChange={(e) => editorChangeHandler(e)}
-            placeholder="Enter Name"
-          />
-          <input
-            type="text"
-            name="phone"
-            onChange={(e) => editorChangeHandler(e)}
-            placeholder="Enter Phone"
-          />
-          <input
-            type="text"
-            name="email"
-            onChange={(e) => editorChangeHandler(e)}
-            placeholder="Enter Email"
-          />
-          <input
-            type="text"
-            name="rel"
-            onChange={(e) => editorChangeHandler(e)}
-            placeholder="Enter Rel"
-          />
-          <input
-            type="file"
+          <EditorInput name="name" onChange={(e) => editorChangeHandler(e)} />
+          <EditorInput name="phone" onChange={(e) => editorChangeHandler(e)} />
+          <EditorInput name="email" onChange={(e) => editorChangeHandler(e)} />
+          <EditorInput name="rel" onChange={(e) => editorChangeHandler(e)} />
+          <EditorInput
             name="userImg"
-            accept=".jpeg , .png , .jpg"
+            accept={".jpeg , .png , .jpg"}
+            type={"file"}
             onChange={(e) => imageChangeHandler(e)}
           />
           <button type="submit">SUBMIT</button>

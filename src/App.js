@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./App.css";
 import ContactShowercc from "./Components/ContactShower/ContactShower";
 import Editor from "./Components/Editor/Editor";
+import FormInput from "./Components/FormInput/FormInput";
 
 const App = () => {
   //const formRef = React.createRef();
@@ -52,7 +53,7 @@ const App = () => {
     });
   };
   const imageHandler = (e) => {
-    setUser({ ...user, userImg: e.target.files[0] })
+    setUser({ ...user, userImg: (e.target.files[0]) || "" })
   }
   const onEdit = (formData) => {
     const copyOfState = [...contacts]
@@ -69,42 +70,31 @@ const App = () => {
   return (
     <div className="main-container">
       <form onSubmit={(e) => onSubmit(e)} >
-        <div
-          onFocus={(e) => onIpnutsFocusEventHandler(e)}
+        <FormInput onFocus={(e) => onInputBlurEventHandler(e)}
           onBlur={(e) => onInputBlurEventHandler(e)}
-        >
-          <div className="helper">Enter Name Here ...</div>
-          <input name="name" type="text" onChange={(e) => onChangeHandler(e)} />
-        </div>
-        <div
-          onFocus={(e) => onIpnutsFocusEventHandler(e)}
+          onChangeHandler={(e) => { onChangeHandler(e) }}
+          name={"name"}
+          type="text"
+        />
+
+        <FormInput onFocus={(e) => onInputBlurEventHandler(e)}
           onBlur={(e) => onInputBlurEventHandler(e)}
-        >
-          <div className="helper">Enter Phone Here ...</div>
-          <input
-            name="phone"
-            type="number"
-            onChange={(e) => onChangeHandler(e)}
-          />
-        </div>
-        <div
-          onFocus={(e) => onIpnutsFocusEventHandler(e)}
+          onChangeHandler={(e) => { onChangeHandler(e) }}
+          name={"phone"}
+          type="number"
+        />
+        <FormInput onFocus={(e) => onInputBlurEventHandler(e)}
           onBlur={(e) => onInputBlurEventHandler(e)}
-        >
-          <div className="helper">Enter Email Here ...</div>
-          <input
-            name="email"
-            type="text"
-            onChange={(e) => onChangeHandler(e)}
-          />
-        </div>
-        <div
-          onFocus={(e) => onIpnutsFocusEventHandler(e)}
+          onChangeHandler={(e) => { onChangeHandler(e) }}
+          name={"email"}
+          type="text"
+        />
+        <FormInput onFocus={(e) => onInputBlurEventHandler(e)}
           onBlur={(e) => onInputBlurEventHandler(e)}
-        >
-          <div className="helper">Enter Rel Here ...</div>
-          <input name="rel" type="text" onChange={(e) => onChangeHandler(e)} />
-        </div>
+          onChangeHandler={(e) => { onChangeHandler(e) }}
+          name={"rel"}
+          type="text"
+        />
         <input type="file" name="userImg" accept=".jpeg , .png , .jpg" onChange={(e) => {
 
           imageHandler(e)

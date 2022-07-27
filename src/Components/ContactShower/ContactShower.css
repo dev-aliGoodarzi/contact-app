@@ -1,6 +1,6 @@
 .contact {
   width: 30vw;
-  height: 55vh;
+  height: 60vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12,20 +12,29 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 1rem;
-  -webkit-box-shadow: 2px 2px 0.5rem #ce09c4;
-          box-shadow: 2px 2px 0.5rem #ce09c4;
-  margin-top: 3vh;
+  -webkit-box-shadow: 0 6px 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 6px 1rem rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-top: 5vh;
+  margin-bottom: 1vh;
+}
+
+.contact:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 .contact p {
   width: 100%;
-  height: 5vh;
+  height: 8%;
   -webkit-box-shadow: 3px 3px 5px blueviolet;
           box-shadow: 3px 3px 5px blueviolet;
   margin-top: 1rem;
@@ -42,11 +51,21 @@
           box-sizing: border-box;
   padding: 0.5rem;
   border-radius: 1rem;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.contact p:hover {
+  -webkit-transform: scale(1.06);
+          transform: scale(1.06);
 }
 
 .contact img {
-  width: 5rem;
-  height: 5rem;
+  width: 45%;
+  height: 30%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
 }
 
 .contact button {
@@ -55,6 +74,7 @@
   margin-top: 0.3rem;
   background-color: rgba(0, 0, 128, 0.5);
   color: #ffff;
+  border-radius: 1rem;
   font-size: 0.9rem;
 }
 /*# sourceMappingURL=ContactShower.css.map */

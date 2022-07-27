@@ -1,0 +1,11 @@
+input {
+  width: 80%;
+  height: 12%;
+  border-radius: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 1rem;
+  position: relative;
+  z-index: 99999;
+}
+/*# sourceMappingURL=EditorInput.css.map */
