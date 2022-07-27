@@ -1,0 +1,41 @@
+.contact {
+  width: 30vw;
+  height: 55vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  padding: 1rem;
+  box-shadow: 2px 2px 0.5rem rgb(206, 9, 196);
+  margin: {
+    top: 3vh;
+  }
+  p {
+    width: 100%;
+    height: 5vh;
+    box-shadow: 3px 3px 5px blueviolet;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    border-radius: 1rem;
+  }
+  img {
+    width: 5rem;
+    height: 5rem;
+  }
+  button {
+    width: 50%;
+    height: 2rem;
+    margin-top: 0.3rem;
+    background-color: rgba(0, 0, 128, 0.5);
+    color: #ffff;
+    font : {
+      size: 0.9rem;
+    }
+  }
+}
